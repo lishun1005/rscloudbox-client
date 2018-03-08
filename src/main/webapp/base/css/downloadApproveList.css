@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+html,body{width:100%;height:auto; overflow-x:auto; overflow-y:auto;font-family:"微软雅黑";background:#f1f1f1;font-size:16px;}
+
+/* 公共样式 */
+.fl{float:left}
+.fr{float:right}
+.mt10{margin-top:10px}
+.mb20{margin-bottom:20px}
+.mb15{margin-bottom:15px}
+.mar-auto{margin:0px auto}
+.ovcl{overflow:hidden;clear:both}
+.dn{display:none}
+#header{position:absolute}
+/* 左边菜单 */
+.left{width:200px;height:100%;background:#28282e;position:absolute;z-index: 100;}
+.logo{width:200px;height:72px;background:#0b0b18 url(../img/logo1.png) no-repeat center center}
+.left-menu{width:200px;background:#28282e}
+.content-header{padding-left:20px;width:180px;height:59px;line-height:59px;background:#28282e url(../img/arrow.png) no-repeat 164px center;font-size:18px;color:#95a0aa}
+.contentMenu div{cursor:pointer;padding-left:38px;line-height:52px;width:162px;height:52px;background:#32323a;font-size:16px;color:#95a0aa}
+.content-headActive{background-color:#32323a}
+.left-menu .active{color:#ffffff;background:#49c994}
+/* 右边头部 */
+.right{margin:50px 0 0 200px;height:100%;}
+.top{width:100%;height:50px;background:#ffffff;position:fixed;top:0;left:0;}
+.powerOff{width:50px;height:50px;background:#ff7979 url(../img/powerOff.png) no-repeat center center;}
+.mgtInfo{line-height:50px;margin-right:15px;font-size:16px;}
+
+/* 右边内容 */
+/* 样例数据 */
+.main{padding:80px 0 20px 0;width:1200px;}
+/* .main .title{color: #ffffff;width: 85px;background: #3399ff;border-bottom:1px solid #dddddd;font-size:16px;padding:12px 0 12px 15px;} */
+.main .content{padding:15px 0 0 15px}
+.baseInfo{background:#ffffff;height:165px;}
+.application,.data{background:#ffffff}
+.content span{display:block;text-align:right;width:120px;color:#999999;margin-right:12px}
+.download{color:#3399ff;text-decoration:underline;margin-left:40px;}
+.application .td1{width:134px;height:38px;border:1px solid #dce4eb;border-top:0;line-height:38px;text-align:center;font-size:14px;}
+.application .td2{width:83px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.application .td3{width:115px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.application .td4{width:242px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.application .td5{width:94px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.application .borderTop{border-top:1px solid #dce4eb}
+
+/* 下载审批列表 */
+.Search{background:#ffffff;}
+.Search .searchTitle{border-bottom:1px solid #dddddd;font-size:16px;}
+.Search .title{cursor:pointer;border-bottom:0px solid #dddddd;font-size:16px;padding:10px 21px;margin-right:8px;color:#333333}
+.Search .active{background:#3399ff;color:#ffffff}
+.Search .searchResult{padding:20px;}
+.searchResult .searchWords{line-height:40px;height:40px;font-size:16px;margin-bottom:20px}
+.searchWords input,body input[type=text]{width:440px;height:40px;border:1px solid #dce4eb;border-radius:3px;padding:5px;margin:0 15px}
+.searchResult .searchBtn{cursor:pointer;padding:0px 21px;background:#3399ff;color:#ffffff;border-radius:3px}
+.searchResult .td1{width:71px;height:38px;border:1px solid #dce4eb;border-top:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td2{width:196px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td3{width:116px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td4{width:193px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td5{width:192px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td6{width:219px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .td7{width:101px;height:38px;border:1px solid #dce4eb;border-top:0;border-left:0;line-height:38px;text-align:center;font-size:14px;}
+.searchResult .borderTop{border-top:1px solid #dce4eb}
+.detail{color:#3399ff;cursor:pointer}
+
+
+
+
+
+
+
+

@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>云盒数据管理系统</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="icon" href="cloudBox/img/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="cloudBox/img/favicon.ico" type="image/x-icon"/> 
+<link rel="stylesheet" href="push/css/base.css" />
+<link rel="stylesheet" href="base/css/base.css" />
+<link rel="stylesheet" href="base/css/jquery-ui.css" />
+<link rel="stylesheet" href="push/css/push.css" />
+<script src="base/js/jquery-1.11.1.min.js"></script>
+<script src="base/tools/dataOperationBuilder.js"></script>
+</head>
+<body>
+	<!-- header wrap-->
+	<!-- 公共头部 star -->
+	<div id="header">
+		<div class="contWarp">
+			<div id="logo"></div>
+			<ul class="cloud_menu">
+				<li><a class="dinline" href="cloudBox.html">数据查询</a></li>
+				<!-- <li><a id="headruku" class="dinline" href="dataLoader.html">入库</a></li> -->
+				<li><a href="push.html">我的云盒</a>
+					<ul>
+						<li><a href="push.html">我的推送记录</a></li>
+						<!-- <li><a href="dataLoader.html?html=1">我的入库记录</a></li> -->
+						<li><a href="listCheckProcess">我的下载申请</a></li>
+					</ul>
+				</li>
+				<!-- <li id="errorHint"><a href="dataLoader.html?html=1">&nbsp;</a>
+					<ul>
+						<li>有<span></span>个数据包出现入库问题!</li>
+					</ul>
+				</li> -->
+				<li id="loginOut"><a >&nbsp;</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 中部 -->
+	<div class="center">
+		<div class="content">
+			<div class="push_task_content"   style="display:none">
+				<div class="title">
+					推 送<br />任 务
+				</div>
+				<table class="head">
+					<tr class="head1">
+						<td>数据类型：<a>标准数据</a>
+						</td>
+						<td>数据包大小：<a>50.25G</a>
+						</td>
+						<td><a class="wait">等待中</a>
+						</td>
+					</tr>
+					<tr class="head2">
+						<td colspan="2">预计完成耗时：<a>4天10小时</a>
+						</td>
+						<td>（完成0%）</td>
+					</tr>
+				</table>
+				<div class="left1">
+					<div class="l0_1">
+						<span class="push">推送</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<div class="l0_2">
+						<span class="push">推送</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<!-- <div class="l1_1">
+						<span class="push">解压</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<div class="l1_2">
+						<span class="push">解压</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div> -->
+					<div class="l2_1">
+						<span class="push">入库</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<div class="l2_2">
+						<span class="push">入库</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<!-- <div class="l3_1">
+						<span class="push">切片、发布</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+					<div class="l3_2">
+						<span class="push">切片、发布</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div> -->
+					<div class="l4_1">
+						<span class="push">结束</span>
+						<div>
+							<img class="post" src="push/img/post.png" /> <img class="finish"
+								src="push/img/finish.png" />
+						</div>
+					</div>
+				</div>
+
+				<div class="center1">&nbsp</div>
+
+				<div class="right1">
+					<div class="r0_1">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<div class="r0_2">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<!-- <div class="r1_1">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<div class="r1_2">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div> -->
+					<div class="r2_1">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<div class="r2_2">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<!-- <div class="r3_1">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+					<div class="r3_2">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div> -->
+					<div class="r4_1">
+						<img class="plane" src="push/img/plane.png" /> <a></a>
+					</div>
+				</div>
+			</div>
+			<div class="push_record_content" >
+				<span>推送记录</span> <br />
+				<table>
+					<thead class="td">
+						<td class="td">序号</td>
+						<td class="td">推送时间</td>
+						<td class="td">数据类型</td>
+						<td class="td">压缩包大小</td>
+						<td class="td">状态</td>
+						<td class="td">操作</td>
+					</thead>
+					<tr class="orderedlist">
+						<td>1</td>
+						<td>2015-06-09 20:15</td>
+						<td>地图服务</td>
+						<td>50.25G</td>
+						<td>完成</td>
+						<td><a class="xinxi" type="button">&nbsp</a><a class="dinwei"
+							type="button">&nbsp</a><a class="download" type="button">&nbsp</a>
+						</td>
+					</tr>
+
+					<tr class="orderedlist">
+						<td>2</td>
+						<td>2015-06-09 20:15</td>
+						<td>地图服务</td>
+						<td>50.25G</td>
+						<td class="push">推送中</td>
+						<td><a class="xinxi" type="button">&nbsp</a><a class="dinwei"
+							type="button">&nbsp</a><a class="download" type="button">&nbsp</a>
+						</td>
+					</tr>
+
+					<tr class="orderedlist">
+						<td>3</td>
+						<td>2015-06-09 20:15</td>
+						<td>标准数据</td>
+						<td>50.25G</td>
+						<td>等待中</td>
+						<td><a class="xinxi" type="button">&nbsp</a><a class="dinwei"
+							type="button">&nbsp</a><a class="download" type="button">&nbsp</a>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- footer wrap-->
+	<div class="footer_Wrap"></div>
+	<script src="push/js/push.js"></script> 
+	<script type="text/javascript">
+		//控制各步骤样式
+	   // step(1,"开始入库","正在入库中。。","原始影像");   
+		function step(param,tipmessage,contentmessage,type) {
+			//param为后台返回的，表示推送执行到哪一步。
+			//0为等待，1为推送，2为解压，3为切片，4为发布
+			//改变推送步骤样式为相对应的样式。
+			//type="原始影像";
+			 backstutes();
+			 if(param==-1){
+				$(".l0_1").css("visibility", "hidden");
+				$(".l0_2").css("visibility", "visible");
+				$(".r0_1").css("visibility", "visible");
+				$(".r0_1 a").html(tipmessage);
+				$(".r0_2 .plane").css("visibility", "hidden");
+				$(".r0_2 a").css("visibility", "hidden");
+				$(".r0_2 a").html(contentmessage);
+				for (i = 1; i < 5; i++) {
+					$(".l" + i + "_1").css("visibility", "visible");
+					$(".l" + i + "_2").css("display", "none");
+					$(".r" + i + "_1 .plane").css("visibility", "hidden");
+					$(".r" + i + "_1 a").css("visibility", "hidden");
+					$(".r" + i + "_2").css("display", "none");
+					$(".r" + i + "_2 .plane").css("visibility", "hidden");
+					$(".r" + i + "_2 a").css("visibility", "hidden");
+				}
+			}
+			if (param == 0 || param == 1 || param == 2 || param == 3|| param == 4) {  
+				for (i = 0; i < 5; i++) {
+					if (param == i ) {
+					    if(type=="原始影像"){
+					     	if(i == 3) 
+					     	return false;
+					    } 
+						$(".l" + i + "_1").css("visibility", "visible");
+						$(".l" + i + "_2").css("display", "block");
+						$(".l" + i + "_2").css("visibility", "hidden");
+						$(".r" + i + "_1 .plane").css("visibility", "hidden");
+						$(".r" + i + "_1 a").css("visibility", "visible");
+						$(".r" + i + "_1 a").html(tipmessage);
+						$(".r" + i + "_2 .plane").css("visibility", "visible");
+						$(".r" + i + "_2 a").css("visibility", "visible");
+						$(".r" + i + "_2 a").html(contentmessage);
+					} else {
+						if(type=="正射影像"){
+					    	$(".l" + i + "_1").css("display", "block");
+							//$(".l" + i + "_1").css("visibility", "visible");
+							$(".l" + i + "_2").css("display", "none");
+							$(".r" + i + "_1 .plane").css("visibility", "hidden");
+							$(".r" + i + "_1 a").css("visibility", "visible");
+							if(i<param)
+							$(".r" + i + "_1 a").html("任务结束。");
+							$(".r" + i + "_1 .plane").css("visibility", "hidden");
+							$(".r" + i + "_2").css("display", "none");
+							$(".r" + i + "_2 .plane").css("visibility", "hidden");
+							$(".r" + i + "_2 a").css("visibility", "hidden");
+					   }else if(type=="原始影像"){
+					   	   if(i == 3){
+					   	   	$(".l" + i + "_1").css("display", "none");
+							$(".l" + i + "_2").css("display", "none");
+							$(".r" + i + "_1").css("display", "none");
+							$(".r" + i + "_2").css("display", "none");
+					   	   }else{
+					   	   	$(".l" + i + "_1").css("visibility", "visible");
+					   	   //	$(".r" + i + "_1 a").css("visibility", "hidden");
+							$(".l" + i + "_2").css("display", "none");
+							$(".r" + i + "_2 .plane").css("visibility", "hidden");
+							$(".r" + i + "_2 a").css("visibility", "visible");
+							if(i<param)
+							$(".r" + i + "_1 a").html("任务结束。");
+							$(".r" + i + "_1 .plane").css("visibility", "hidden");
+							$(".r" + i + "_1 .a").css("visibility", "hidden");
+							$(".r" + i + "_2").css("display", "none");
+							$(".r" + i + "_2 .plane").css("visibility", "hidden");
+							$(".r" + i + "_2 a").css("visibility", "hidden");
+					   	   }
+					   } 
+					}
+				}
+				
+			} 
+			
+		}
+		$(".orderedlist").hover(function() {
+			$(this).addClass("blue");
+		}, function() {
+			$(this).removeClass("blue");
+		});
+		$("#loginOut").click(function(){
+ 			window.location.href="logout.htm";
+ 		});
+	function backstutes(){
+		for (i = 0; i < 5; i++) {
+			$(".l" + i + "_1").css("display", "block");
+			$(".l" + i + "_1").css("visibility", "visible");
+			$(".l" + i + "_2").css("display", "block");
+			$(".l" + i + "_2").css("visibility", "visible");
+			$(".r" + i+ "_1").css("display", "block");
+			$(".r" + i + "_1 ").css("visibility", "visible");
+			$(".r" + i + "_1 .a").css("visibility", "visible");
+			$(".r" + i + "_1 .plane").css("visibility", "visible");
+			$(".r" + i+ "_2").css("display", "block");
+			$(".r" + i+ "_2").css("visibility", "visible");
+			$(".r" + i + "_1 .a").css("visibility", "visible");
+			$(".r" + i + "_2 .plane").css("visibility", "visible");
+		}
+	}
+		/* $(".xinxi,.dinwei,.download").click(function() {
+			alert("1");
+		}); */
+	</script>
+</body>
+</html>

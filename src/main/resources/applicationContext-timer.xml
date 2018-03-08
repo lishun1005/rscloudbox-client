@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd"
+	default-lazy-init="true">
+	<description>使用JDK ScheduledExecutorService的定时任务配置</description>
+	<!-- 定时获取集市最新数据-->
+	<bean id="checkbboxdownloadrecordtimerJob" class="com.cloudbox.timer.CheckBboxDownloadRecordTimerJob" lazy-init="false">
+		<!-- 每次执行间隔1秒 -->
+		<property name="period" value="1" />
+		<!-- 首次执行延期30秒 -->
+		<property name="initialDelay" value="30" />
+		<!-- shutdown时等待任务完成, 最多等待300秒 -->
+		<property name="shutdownTimeout" value="300" />
+	</bean>
+	
+	<!-- 定时执行查询未审批的记录 -->
+	<bean id="checkExaminationApprovalRecordsTimerJob" class="com.cloudbox.timer.CheckExaminationApprovalRecordsTimerJob" lazy-init="false">
+		<property name="period" value="60" />
+		<property name="initialDelay" value="30" />
+		<property name="shutdownTimeout" value="300" />
+	</bean>
+	
+	<bean id="fileDeleteExceptionTimerJob" class="com.cloudbox.timer.FileDeleteExceptionTimerJob" lazy-init="false">
+        <!-- 每次执行间隔2小时 -->
+        <property name="period" value="7200" />
+        <!-- 首次执行延期30秒 -->
+        <property name="initialDelay" value="5" />
+        <!-- shutdown时等待任务完成, 最多等待600秒 -->
+        <property name="shutdownTimeout" value="600" />
+    </bean>
+</beans>

@@ -1,0 +1,127 @@
+.login-main {
+	position: absolute;
+    left: 50%;
+	z-index: 999;
+	width: 820px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #c4c4c4;	
+	margin: 100px 0px 0px -410px;
+	background-image:url(../img/login-bg.png); 
+    background-repeat:no-repeat; 
+ 
+}
+.login-main .logo {
+    position: absolute;
+    left: 50%;
+	margin: 10px 0px 0px -10px;
+    padding: 0px 20px 20px 0px;
+    font-size: 30px;
+    color: rgba(54, 113, 217, 0.9);
+	font-family: "楷体","楷体_GB2312";  
+}
+/*左侧登陆窗*/
+.login-main .error-tip {
+	color: #dc0000;
+	font-size: 14px;
+	height: 22px;
+	line-height: 22px;
+	padding: 7px 0 3px;
+	text-align: center;
+}
+.login-tab-con{ 
+	min-height: 300px;	
+	font-size: 14px;
+	padding: 50px 0;
+	z-index: 5;
+	float: left;
+	border-radius: 3px;
+	box-shadow: none;
+	border: none;
+	border-radius: 3px;
+}
+.login-main .login-tab-con th {
+	width: 100px;
+	padding-right: 20px;
+	text-align: right;
+	font-weight: normal;
+	color: #333;
+}
+
+.login-main .login-tab-con td {
+    padding: 12px 0;
+}
+.login-main .login-tab-con input {
+    border-radius: 3px;
+    width: 300px;
+    height: 35px;
+    box-sizing: border-box;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+.login-main .find input {
+    width: auto;
+    margin: -3px 8px 0 0;
+}
+.login-main  .find {
+    font-size: 12px;
+}
+.login-main  .find label {
+    margin-right: 85px;
+}
+.confirm {
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+    line-height: 28px;
+    border: 1px solid #2899e1;
+    border-radius: 2px;
+    background: #57b4f0;
+    background: -moz-linear-gradient(#57b4f0, #33a4ec);
+    background: -webkit-linear-gradient(#57b4f0, #33a4ec);
+    background: -o-linear-gradient(#57b4f0, #33a4ec);
+    background: linear-gradient(#57b4f0,#33a4ec);
+    color: #fff;
+    text-decoration: none;
+    vertical-align: top;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding: 0;
+}
+/*右侧注册窗口*/
+.login-main .reg {
+	float: right;
+	min-height: 290px;
+	padding: 120px 40px 0;
+	background: url(../img/login-sep.png) no-repeat 0 50%;
+}
+.login-main .reg p {
+	font-size: 17px;
+	font-style: italic;
+	line-height: 30px;
+	padding-bottom: 30px;
+}
+.login-main .reg .reg-btn {
+	display: block;
+	width: 172px;
+	height: 40px;
+	line-height: 38px;
+	border: 1px solid #ff7607;
+	border-radius: 2px;
+	background: #ff8c2f;
+	background: -moz-linear-gradient(#ff8c2f, #ff7607);
+	background: -webkit-linear-gradient(#ff8c2f, #ff7607);
+	background: -o-linear-gradient(#ff8c2f, #ff7607);
+	background: linear-gradient(#ff8c2f, #ff7607);
+	color: #fff;
+	text-decoration: none;
+	vertical-align: top;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: #fff;
+	font-size: 16px;
+	box-shadow: 1px 1px 2px 1px #cfcfcf;
+}

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+	
+	<bean id="SpringContextUtil" class="com.cloudbox.utils.SpringContextUtil"/>
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.cloudbox.mgmt.*">
+		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+		<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice" />
+	</context:component-scan> 
+
+	<!-- 这种加载方式可以在代码中通过@Value注解进行注入 -->
+	<bean id="propertiesReader" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+			<property name="locations">
+				<list>
+					<value>classpath:bbox.system.properties</value>
+					<value>classpath:averagespeed.properties</value>
+					<value>classpath:imageCorrect.properties</value>
+					<value>classpath:goldtowersectioncutting.properties</value>
+				</list>
+			</property>
+	</bean>	
+	<util:properties id="bboxSystemProperties" location="classpath:bbox.system.properties" />
+	<util:properties id="averagespeedProperties" location="classpath:averagespeed.properties" />
+	<util:properties id="imageCorrectProperty" location="classpath:imageCorrect.properties" />
+	<util:properties id="goldtowersectioncutting" location="classpath:goldtowersectioncutting.properties" />
+	
+	<bean id="systemProperty" class="com.cloudbox.utils.PropertyOputils">
+		<constructor-arg>
+			<value>bbox.system.properties</value>
+		</constructor-arg>
+	</bean>
+	<bean id="averagespeed" class="com.cloudbox.utils.PropertyOputils">
+		<constructor-arg>
+			<value>averagespeed.properties</value>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="sqlGenerator" class="com.rsclouds.jdbc.repository.sql.SqlGenerator" />
+	<bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+	<bean id="jdbcTemplateMap" class="com.cloudbox.mgmt.dao.JdbcTemplateMap">
+		<constructor-arg>
+			<map>
+				<entry key="jdbctemplate" value-ref="jdbctemplate"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<bean id="xmlModelMap" class="com.cloudbox.utils.XmlModelMap">
+		<constructor-arg>
+			<map>
+				<entry key="GF1" value="com.cloudbox.xml.bean.GF1ProductMetaData"></entry>
+				<entry key="GF2" value="com.cloudbox.xml.bean.GF2ProductMetaData"></entry>
+				<entry key="ZY3" value="com.cloudbox.xml.bean.ZY3ProductMetaData"></entry>
+				<entry key="ZY02C" value="com.cloudbox.xml.bean.ZY3ProductMetaData"></entry>
+				<entry key="PL" value="com.cloudbox.xml.bean.PLProductMetaData" ></entry>
+			</map>
+		</constructor-arg>
+	</bean>
+	<tx:annotation-driven />
+
+	<aop:config>
+		<aop:advisor advice-ref="txAdvice" pointcut="execution (* com.cloudbox.mgmt.service.impl..*.*(..))" />
+	</aop:config>
+
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="find*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="query*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="show*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="list*" read-only="true" propagation="REQUIRED" />
+			<tx:method name="*" propagation="REQUIRED" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+</beans>

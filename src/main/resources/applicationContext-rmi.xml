@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 	xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    	xmlns:context="http://www.springframework.org/schema/context"
+    	xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+    	default-lazy-init="true">
+    <context:property-placeholder ignore-unresolvable="true" location="classpath*:bbox.system.properties" />
+	<!-- 获取订单下载数据 -->
+	<bean id="checkbboxdownloadrecordServerRmiService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
+		lazy-init="true">
+		<property name="serviceUrl" value="rmi://${clouboxMgmt.rmi.ip}/checkbboxdownloadrecordServerRmiService"></property>
+		<property name="serviceInterface"
+			value="com.chinarsgeo.rscloudmart.web.webservice.ICheckBboxDownloadRecordServer"></property>
+		<property name="refreshStubOnConnectFailure">
+			<value>true</value>
+		</property> 
+		<property name="lookupStubOnStartup">
+			<value>false</value>
+		</property>
+	</bean>
+	<!-- 获取编目数据 -->
+	<bean id="getEdgeDataInfomationsServerRmiService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
+		lazy-init="true">
+		<property name="serviceUrl" value="rmi://${clouboxMgmt.rmi.ip}/getEdgeDataInfomationsServerRmiService"></property>
+		<property name="serviceInterface"
+			value="com.chinarsgeo.rscloudmart.web.webservice.IGetEdgeDataInfomationsServer"></property>
+		<property name="refreshStubOnConnectFailure">
+			<value>true</value>
+		</property>
+		<property name="lookupStubOnStartup">
+			<value>false</value>
+		</property>
+	</bean>
+	<!-- 查询审批状态 -->
+	<bean id="checkApproveStatusServerRmiService" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
+		lazy-init="true">
+		<property name="serviceUrl" value="rmi://${clouboxMgmt.rmi.ip}/checkApproveStatusServerRmiService"></property>
+		<property name="serviceInterface"
+			value="com.chinarsgeo.rscloudmart.web.webservice.ICheckApproveStatusServer"></property>
+		<property name="refreshStubOnConnectFailure">
+			<value>true</value>
+		</property>
+		<property name="lookupStubOnStartup">
+			<value>false</value>
+		</property>
+	</bean>
+	<!-- 后端登陆接口 -->
+	<bean id="yunheLoginServerRmiServiceExporter" class="org.springframework.remoting.rmi.RmiProxyFactoryBean"
+		lazy-init="true">
+		<property name="serviceUrl" value="rmi://${clouboxMgmt.rmi.ip}/yunheLoginServerRmiService"></property>
+		<property name="serviceInterface"
+			value="com.chinarsgeo.rscloudmart.web.webservice.IYunheLoginServer"></property>
+		<property name="refreshStubOnConnectFailure">
+			<value>true</value>
+		</property> 
+		<property name="lookupStubOnStartup">
+			<value>false</value>
+		</property>
+	</bean>
+</beans>

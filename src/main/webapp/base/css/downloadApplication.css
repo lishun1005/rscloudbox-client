@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+body{background:#f8f8f8;}
+.fl{float:left}
+.fr{float:right}
+.dn{display:none}
+.mar-auto{margin:0 auto}
+.red{color:#e42929}
+.grey{color:#999999}
+.font12{font-size:12px;}
+.font14{font-size:14px;}
+.pb25{padding-bottom:25px}
+.ovcl{overflow:hidden;clear:both}
+/* 内容 */
+.main{width:100%;background:#f8f8f8;}
+.mainWrap{width:1200px;background:#ffffff}
+.title{margin-top:21px;width:1200px;height:45px;border-bottom:1px solid #dce4eb}
+.applicationForm{background:#3399ff;width:105px;height:46px;line-height:46px;color:#ffffff;text-align:center;border-bottom:0px;}
+.contentWrap{width:1200px;}
+.content{width:730px;margin-top:60px;}
+.content div{height:40px;line-height:40px;}
+body input[type=text],input{width:440px;height:40px;border:1px solid #dce4eb;border-radius:3px;font-size:14px;line-height:40px;padding-left:10px}
+.main span.error{font-size:14px;color:#e42929;display: block;margin:10px 0 0 190px;}
+/* 用户信息 */
+.name{margin-left:100px}
+.customName{margin:20px 0 0 85px;}
+.customTel{margin:20px 0 0 69px}
+.demo .dataUse{margin:13px 0 0 100px}
+.sell .dataUse{margin:20px 0 0 100px}
+.demo .applicationChoose{cursor:pointer;margin:5px 0 0 180px ;border-radius:3px;border:1px solid #dce4eb;font-size:14px;width:440px;height:40px;line-height:40px;padding-left:10px}
+.sell .applicationChoose{cursor:pointer;border-radius:3px;border:1px solid #dce4eb;font-size:14px;width:428px;height:40px;line-height:40px;padding-left:10px}
+.applicationChoose ul{position:relative;top:2px;left:-2px}
+.applicationChoose ul li{width:440px;margin-left:-9px;border-radius:3px;border:1px solid #dce4eb;border-top:0px;background:#ffffff;text-align:left;padding-left:10px}
+.applicationChoose ul li:hover{background:#3399ff;color:#ffffff}
+
+/* 销售申请 */
+.hetong{margin: 20px 0 0 5px;}
+.hetongScan,.fapiaoScan{margin:20px 0 0 82px;}
+/* 数据清单 */
+.demo.contentWrap{
+	padding-bottom:30px;
+}
+.content .dataTitle{margin-top:20px;border-top:1px dashed #dce4eb;height:56px;line-height:56px}
+.dataTableTitle{border-bottom:1px solid #dce4eb;}
+.demo .tr1{border:1px solid #dce4eb;width:243px;height:40px;line-height:40px;text-align:center;}
+.demo .tr2{border:1px solid #dce4eb;border-left:0px;width:243px;height:40px;line-height:40px;text-align:center;}
+.demo .tr3{border:1px solid #dce4eb;border-left:0px;width:238px;height:40px;line-height:40px;text-align:center;}
+.sell .tr1{border:1px solid #dce4eb;width:134px;height:40px;line-height:40px;text-align:center;}
+.sell .tr2{border:1px solid #dce4eb;border-left:0px;width:83px;height:40px;line-height:40px;text-align:center;}
+.sell .tr3{border:1px solid #dce4eb;border-left:0px;width:115px;height:40px;line-height:40px;text-align:center;}
+.sell .tr4{border:1px solid #dce4eb;border-left:0px;width:125px;height:40px;line-height:40px;text-align:center;}
+.tr4 .thePrice{line-height:28px;width:170px;height:28px;margin:5px 0px 5px 19px;font-size:14px;}
+.sell .tr6 input,.tr4 input[type=text]{text-align:center;padding:0 5px;}
+.sell .tr6{width:128px;text-align:center;border:1px solid #dce4eb;}
+.tr4 .thePrice,.tr4 .thePrice2,.tr6 input.sell-area,.tr6 input.sell-area2{line-height:28px;width:100px;height:28px;margin:5px;font-size:14px;}
+.tr4 .thePrice,.tr4 .thePrice2{margin-left:10px;}
+.sell .tr5{border:1px solid #dce4eb;border-left:0px;width:137px;height:40px;line-height:40px;text-align:center;}
+.sell .trtotal,.demo .trtotal,.sell .trtotal2,.demo .trtotal2{border:1px solid #dce4eb;border-left:0px;width:263px;height:40px;line-height:40px;text-align:center;}
+.demo .trtitle,.sell .trtitle{border-top:1px solid #dce4eb;border-bottom:0px solid #dce4eb}
+.dataTotal,.dataTotal2{border-bottom:1px solid #dce4eb;} 
+.tr6.fl input,.tr4.fl input{position:relative;}
+span.error.price-error{position:absolute;right:-100px;top:30px;width:100px;}
+section#pricejin{position:relative;}
+label#listDto[0].unit_price-error{position:absolute;top:30px;right:-70px;}
+label#contract_sales_area-error{position:absolute;top:0;right:-120px;}
+/* 底部 */
+.foot{width:100%;padding-top:14px;height:43px;background:#ffffff;bottom:0px;margin-top:20px;}
+.commit{cursor:pointer;background:#3399ff;border-radius:3px;width:79px;height:29px;line-height:29px;margin:0 auto;color:#ffffff;text-align:center}
+
+/* 遮罩层 */
+.mask{width:100%;height:100%;background:#000000;position:fixed;opacity:0.8;top: 0;}
+/* 弹出框 */
+.theDialog{background:#ffffff;width:370px;height:120px;padding:10px;position: fixed;margin: auto;top: 0;bottom: 0;left: 0;right: 0;}
+.theDialog .close{width:100%;height:18px;display:block}
+.theDialog .closeBtn{cursor:pointer;width:18px;height:18px;background:url(../img/close.png) no-repeat center center}
+.theDialog .dialogContent{padding:5px 10px 20px 10px;text-align:center}
+.theDialog .dialogContent .goto{color:#3399ff;cursor:pointer;text-decoration: underline;}
+.theDialog .dialogContent p{line-height: 2;}
+.content div.dataList-title{height:45px;margin-top:20px;border-top:1px dashed #dce4eb;padding-bottom:10px;padding-top:20px;}
+.data-Title{float:left;}
+.datapricechoose{font-size:14px;}
+.datapricechoose{float:right;}
+.celect-label{color:#999999;}

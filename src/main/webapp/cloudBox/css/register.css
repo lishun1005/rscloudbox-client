@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+body{background:#f8f8f8; margin:0px; padding:0px;}
+
+#bodydiv{ width:400px; height:100%; margin:0px auto;}
+#logo{margin-top:200px;height:100px;height:120px;background:url(../img/logo_03.gif) no-repeat 75px 30px; text-align:center; border:1px solid #f8f8f8;}
+#logo h1{ margin-left:50px; font-size:42px; font-family:"微软雅黑";}
+#login{ width:400px;height:300px;text-align:center; background:#FFF; margin-top:0px;border-radius:7px;-moz-border-radius:7px;-webkit-border-radius:7px;}
+#login input[type=button]{color:#FFF; font-family:'微软雅黑'; font-size:16px; line-height:30px; cursor:pointer;}
+#login label{ text-align:left;color:#ff0000; font-size:12px; float:left; margin-left:35px; margin-top:10px;height:22px; width:100px;}
+.usertxt,.pwdtxt{width:311px; height:34px;-webkit-border-radius:4px;-moz-border-radius:4px; border-radius:4px;border:1px solid #d5d5d5; padding:3px;overflow:hidden; outline:none;line-height:30px\9;}
+.usertxt{ background:url(../img/login_01.jpg) no-repeat 0px 9px;padding-left:22px;margin-top:50px;}
+.pwdtxt{background:url(../img/login_02.gif) no-repeat 0px 8px;padding-left:22px;margin-top:20px;}
+.but{  width:100px; height:36px;background:#3399fe; margin-top:48px; float:right; margin-right:33px; border-radius:5px;border: solid 1px #3399fe;}
+
+
+

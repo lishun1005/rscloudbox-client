@@ -1,0 +1,13 @@
+.olControlDrawFeatureSquarePolygonItemInactive {
+	display:inline-block;width:30px;height:28px;background:url(../../cloudBox/img/tuxin2.png) no-repeat 0 1px;margin:0 12px 0 0;cursor:pointer;float:left;
+}
+
+.olControlDrawFeatureSquarePolygonItemActive {
+	display:inline-block;width:30px;height:28px;background:url(../../cloudBox/img/tuxin2.png) no-repeat 0 -73px;margin:0 12px 0 0;cursor:pointer;float:left;
+}
+.olControlDrawFeaturePolygonItemInactive {
+	display:inline-block;width:30px;height:28px;background:url(../../cloudBox/img/tuxin2.png) no-repeat 0 -36px;cursor:pointer;float:left;
+}
+.olControlDrawFeaturePolygonItemActive {
+	display:inline-block;width:30px;height:28px;background:url(../../cloudBox/img/tuxin2.png) no-repeat 0 -108px;cursor:pointer;float:left;
+}

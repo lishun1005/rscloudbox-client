@@ -1,0 +1,34 @@
+#showCalendar .week {background: #89bcf7 none repeat scroll 0 0; color: white;
+}
+#showCalendar li a.active {background: #72b3fa none repeat scroll 0 0; color: #fff;}
+#showCalendar .current-date {
+    background: #78aee6 none repeat scroll 0 0;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+#showCalendar .current-date select {
+    color: #000;
+}
+#showCalendar .current-date select {
+    font-size: 12px;
+    margin: 3px 2px;
+    padding: 2px;
+}
+.do2-yun-slider .ui-slider-handle {
+    background: #292e36 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    cursor: pointer;
+    height: 18px;
+    margin-left: -1px;
+    top: -6px;
+    width: 6px;
+}
+.rangslider_wrap .ui-slider-handle{width:5px; height:13px; background-color:#666; margin-left:-1px; top:-5px}
+.rangslider_wrap .ui-widget-header{background-color:#3399ff;}
+.rangslider_wrap .ui-slider-horizontal .ui-slider-range{height:5px;}
+.rangslider_wrap .ui-slider-horizontal{height:5px;}
+.select-item li:hover, .select-item li.active{background:#3399ff;}
+.select-item li a:hover, .select-item li.active a{color:#fff;}

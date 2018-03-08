@@ -1,0 +1,85 @@
+/***** base.css ******/
+body{margin:0}
+table { border-collapse: collapse;}
+table a{color:#333333;}
+/******头部 错误提示样式*******/
+#errorHint{margin:0;padding:0;display:none;}
+#errorHint{float:right;width:30px;height:60px;min-width:20px;margin-top:-60px;margin-right:-18px; text-align:center;}
+#errorHint a{display:inline-block;width:19px;height:30px; background:url(../../cloudBox/img/dataLoader/errorHint1.png) no-repeat;margin-top:22px;margin-left:4px;}
+#errorHint ul{position:absolute;right:0;top:60px;display:none;background:#102842;width:180px; margin-left:-150px; z-index:5;}
+#errorHint ul li{height:40px;width:100%;background:#041629;font-size:14px; cursor:pointer; line-height:40px;}
+#errorHint ul li a{}
+#errorHint:hover ul{display:block;}
+/***** header wrap******/
+/* #headruku{margin-left:-30px;}
+.cloud_menu{width:310px !important;height:60px;float:right;text-align:center;}
+.cloud_menu a{margin-left:-15px}
+.dataloaer{width:auto;height:60px;line-height:60px;display:inline-block;float:left;font-size:20px;color:#fff;font-weight:bold;}
+#header{width:100%;min-width:402px;height:60px;background:#2c3e50;box-sizing:border-box;-moz-box-sizing:border-box; Firefox
+-webkit-box-sizing:border-box; Safari;}
+#logo{width:162px;height:60px;background:url(../../cloudBox/img/cloud_logo.png) no-repeat 10px center;float:left;}
+#logo h1{margin-left:80px;color:#c6e3ff;font-size:25px;height:60px;line-height:60px;}
+.cloud_menu{width:200px;height:60px;float:right;padding-right:10px;text-align:right; margin-right:20px;}
+.cloud_menu a{ text-decoration:none;color:#a6bcd1;font-family:"微软雅黑";font-size:16px;height:60px;line-height:60px;display:inline-block;cursor:pointer;}
+.cloud_menu li{float:left;min-width:100px;width:auto;height:60px;line-height:60px;position:relative;}
+.cloud_menu li a{display:block;text-decoration:none;width:100%;height:60px;font-size:16px;color:#8899aa;}
+.cloud_menu li ul{position:absolute;left:0;top:60px;display:none;background:#102842;width:120px;z-index:6;}
+.contWarp{width:1072px;margin:0 auto;}
+.cloud_menu li ul li{height:50px;line-height:50px;width:100%}
+.cloud_menu li ul li a{color:#e9e9e9;}
+.cloud_menu li:hover{background:#05162a;color:#e9e9e9;}
+.cloud_menu li:hover ul{display:block;}
+ */
+/*****center*****/
+.center{height:100%;}
+.content{width:1200px;margin:0px auto;}
+
+/*****push_task_content*****/
+.push_task_content{}
+.push_task_content .title{width:10%;height:90px;background-color:#e4e9ee;float:left;color:#5d6d7e;font-size:150%;text-align:center;padding-top:20px;}
+.push_task_content .title{position:relative;background:#e4e9ee url(../img/push_title.png) no-repeat;}
+.push_task_content .head{background-color:#f7faff;height:110px;width:90%;}
+.push_task_content .head .head1 td{height:35px;border:0;color:#9aabb8;text-align:left;padding-left:5%;font-size:110%;width:38%;padding-top:20px}
+.push_task_content .head .wait{font-size:150%;padding-left:5.1%}
+.push_task_content .head .head2 td{height:35px;border:0;color:#9aabb8;text-align:left;padding-left:5%;font-size:110%;width:38%;padding-bottom:20px}
+.push_task_content .head .head1 td .push{padding-left:8px;color:#33;font-size:150%;}
+
+.push_task_content .left1{height:100%;width:21%;float:left}
+.push_task_content .left1 > div{height:58px;text-align:right;color:#9aabb8;font-size:110%;padding-top:50px;padding-right:20px}
+.push_task_content .left1 > div > span{padding:7px;padding-left:15px;padding-right:15px;background-color:#eff2f5;border-radius: 5px;}
+.push_task_content .left1 > div > div{margin-right:-32px;float:right;position:relative;z-index: 1000;}
+.push_task_content .center1{height:593px;width:0.5%;float:left;background-color:#dfe6f3}
+.push_task_content .right1{height:100%;width:78.5%;float:left}
+.push_task_content .right1 > div{height:50px;text-align:left;color:#9aabb8;font-size:110%;padding-top:48px;padding-bottom:10px;margin-left:20px}
+.push_task_content .right1 > div{background: url(../img/duihuakuang.png) no-repeat;background-position:0px 15px}
+.push_task_content .right1 > div > img{margin-left:-50px;float:left}
+.push_task_content .right1 > div > a{margin-left:42px;font-size:90%;display:block;float:left }
+.push_task_content .right1 > div > a .link{color:#86bcfe;text-decoration:underline;cursor:pointer;}
+
+.push_task_content .l0,.push_task_content .r1,.push_task_content .r2,.push_task_content .r3,.push_task_content.r4{visibility:hidden;}
+.push_task_content .r0{visibility:visible;}
+.push_task_content .finish, .push_task_content.l0 .post{display:none}
+
+/*****push_record_content*****/
+.push_record_content{}
+.push_record_content span{font-family:microsoft yahei;padding-top:15px;padding-bottom:15px;float:left;font-size:16px;color:#333333}
+.push_record_content table td {text-align: center;white-space: normal;word-break: break-all;word-wrap: break-word;}
+.push_record_content td{border:1.5px solid #dce4eb;font-family:SimSun ;width:14%;padding-top:8px;padding-bottom:8px;font-size:12px;}
+.push_record_content thead{background-color:#f6f6f6;}
+.push_record_content .td{font-weight:1200px;font-size: 12px;font-weight: bold;}
+.push_record_content .Op{color:#33cc66;}
+.push_record_content .blue{background-color: #f7faff;}
+.push_record_content .xinxi, .push_record_content .dinwei, .push_record_content .download,.push_record_content .xinxi_light, .push_record_content .dinwei_light, .push_record_content .download_light {float:left;width:33%;position:relative;background: url(../img/buttom_03_1.png) no-repeat;}
+.push_record_content .xinxi_light, .push_record_content .dinwei_light, .push_record_content .download_light {cursor:pointer;}
+.push_record_content .xinxi{background-position:-5px -15px;width:25px;height:17px;margin-left: 40px;margin-right:15px}
+.push_record_content .dinwei{background-position:-45px -15px;width:20px;height:17px}
+.push_record_content .download{background-position:-85px -15px;width:20px;height:17px;margin-left:15px}
+.push_record_content .xinxi_light{background-position:-116px -15px;width:25px;height:17px;margin-left: 40px;margin-right:15px}
+.push_record_content .dinwei_light{background-position:-156px -15px;width:20px;height:17px}
+.push_record_content .download_light{background-position:-196px -15px;width:20px;height:17px;margin-left:15px}
+
+/*****响应式设计*****/
+@media(max-width: 1200px){#content,.header_center,.header_Wrap{width:1200px}}
+@media(min-width: 1201x){#content{width:1200px} .header_center{width:100%}}
+
+.orderedlist td a{cursor:pointer;}

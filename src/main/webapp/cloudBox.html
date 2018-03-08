@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>云盒</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <link rel="icon" href="cloudBox/img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="cloudBox/img/favicon.ico" type="image/x-icon"/> 
+	<link rel="stylesheet" href="base/css/jquery-ui.css" />
+    <link rel="stylesheet" href="cloudBox/css/style.css" />
+    <link rel="stylesheet" href="map/css/mapcontrols.css" />
+    <script src="base/js/jquery-1.11.1.min.js"></script>
+	<script src="cloudBox/js/jQuery.dataCalendar.js"></script>
+	<script src="base/js/jquery-ui-1.9.1.min.js"></script>
+	<script src="map/openlayer/OpenLayers.js" type="text/javascript"></script>
+	<script src="cloudBox/js/cloudBoxInit.js"></script>
+	<script src="map/js/map.js"></script>
+	<script src="map/js/layers.js"></script>
+	<script src="cloudBox/js/errorItemsCount.js" ></script>
+	<script src="cloudBox/js/lonlattranfromdecimalism.js"></script>
+	<script language="javascript" type="text/javascript">
+	$("i.qiu").on('click',function(){
+			$(".box").show();
+			$(".detail_info").css("display","block");
+		});
+	</script>
+</head>
+
+<body>
+<div class="box-bg" style="display: none;"> </div>  
+    <div id="header">
+        <div id="logo">
+            <h1>云盒</h1>
+        </div>
+        <ul class="cloud_menu">
+			<li><a class="dinline" href="cloudBox.html">数据查询</a></li>
+			<!-- <li><a class="dinline" href="dataLoader.html">入库</a></li> -->
+			<li><a href="push.html">我的云盒</a>
+				<ul>
+					<li><a href="push.html">我的推送记录</a></li>
+					<!-- <li><a href="dataLoader.html?html=1" >我的入库记录</a></li> -->
+					<li><a href="listCheckProcess">我的下载申请</a></li>
+				</ul>
+			</li>
+			<li id="loginOut"><a >&nbsp;</a></li>
+			<!-- <li id="errorHint"><a href="dataLoader.html?html=1">&nbsp;</a>
+				<ul>
+					<li>有<span></span>个数据包出现入库问题!</li>
+				</ul>
+			</li> -->
+		</ul>
+    </div>
+    <!-- 	  header end    -->
+    <div id="cloudCT" class="clearfix">
+        <div class="cloud_left">
+            <div class="cloudTab"  id="cloudTab" value="0">
+                <a class="selecteder item condition" id="condition">检索条件</a>
+                <a class="item results" id="result">结果列表</a>
+               <!--  <a href="javascript:my_toggle()">隐藏</a> -->
+            </div>
+            <div class="cloudMain"> 
+                <div class="rettj condition">
+                    <div class="tj_area fanwei" >
+                        <h2>地区范围</h2>
+                        <div class="areaList">
+                            <a id="area" class="item_a selected">行政区划</a>
+                            <a id="graph_select" class="item_a">图形选框</a>
+                            <a id="shp" class="item_a">SHP导入</a>
+                            <a id="longitude" class="item_a">经纬度</a>
+                        </div>
+                        <div class="first_leve2">
+                            <div class="area leve2_item dinwei" style="display:block;">
+                               <div class="diqu1_box diqu mr16 noselectimg" id="province"><span style="width:80px">选择省份</span>
+                                <ul id="diqu1_box" class="province qubox dn">
+                              	   <li id="340000">安徽省</li>
+                                   <li id="110000">北京市</li>
+                                   <li id="500000">重庆市</li>
+                                   <li id="350000">福建省</li>
+                                   <li id="620000">甘肃省</li>
+                                   <li id="440000">广东省</li>
+                                   <li id="450000">广西省</li>
+                                   <li id="520000">贵州省</li>
+                                   <li id="460000">海南省</li>
+                                   <li id="130000">河北省</li>
+                                   <li id="230000">黑龙江省</li>
+                                   <li id="810000">香港</li>
+                                   <li id="420000">湖北省</li>
+                                   <li id="430000">湖南省</li>
+                                   <li id="500000">江苏省</li>
+                                   <li id="320000">江西省</li>
+                                   <li id="220000">吉林省</li>
+                                   <li id="210000">辽宁省</li>
+                                   <li id="150000">内蒙古</li>
+                                   <li id="640000">宁夏</li>
+                                   <li id="630000">青海省</li>
+                                   <li id="370000">山东省</li>
+                                   <li id="310000">上海市</li>
+                                   <li id="610000">陕西省</li>
+                                   <li id="140000">山西省</li>
+                                   <li id="510000">四川省</li>
+                                   <li id="710000">台湾省</li>
+                                   <li id="120000">天津市</li>
+                                   <li id="650000">新疆</li>
+                                   <li id="540000">西藏</li>
+                                   <li id="530000">云南省</li>
+                                   <li id="330000">浙江省</li>
+                                   <li id="820000">澳门</li>               
+                              	 </ul>
+                               </div>
+                               <div class="diqu2_box diqu mr16 noselectimg" id="city"  ><span >选择市</span>
+                              	 <ul id="diqu2_box" class="city qubox dn">
+                              			 
+                              	 </ul>
+                               </div>
+                               <div class="diqu3_box diqu noselectimg" id="county"><span>选择县/区</span>
+                                <ul id="diqu3_box" class="county qubox dn">
+                               	</ul>
+                               </div>
+                            </div>
+                            <div  class="graph_select leve2_item">
+                            	<div id="graph_choose">
+                           		 <!-- 	<span class="tuxin_one "></span>
+                            		<span class="tuxin_two"></span> -->
+                            	</div>
+                            </div>
+                            <div class="shp leve2_item">
+                             	<a href="javascript:;" class="schuan"  title=""><input type="file" name="uploads" id="imgFile" title="" >上传本地shape文件</input></a>
+                            	<a id="shpdownloads" class="dru">导出shape文件</a>
+                            </div>
+                            <div class="longitude leve2_item">
+                            	 <p>
+                            	 <label>左上坐标：</label>
+                            	 <input type="text" class="mr18 form-control" placeholder="经度" onkeyup="this.t ? clearTimeout(this.t) : ''; this.t = setTimeout(jing.call(this), 500)"/>
+                            	    <input class="mr16" type="text" placeholder="纬度" onkeyup="this.t ? clearTimeout(this.t) : ''; this.t = setTimeout(wei.call(this), 500)" />
+                            	    <!-- <a onclick="UnitConverter()">单位转换</a> --></p>
+                                <p>
+                                 <label>右下坐标：</label>
+                                 <input type="text" class="mr18" placeholder="经度" onkeyup="this.t ? clearTimeout(this.t) : ''; this.t = setTimeout(jing.call(this), 500)"/>
+                                 <input class="mr16" type="text" placeholder="纬度"  onkeyup="this.t ? clearTimeout(this.t) : ''; this.t = setTimeout(wei.call(this), 500)" />
+                                   </p>
+                                 <P class="search-map"> <a class="bgarea" onclick="ShowUnitConverter()">检索地图</a></P>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj_area">
+                        <h2>采集时间</h2>
+                        <div class="first_leve2">
+                            <div class="area leve2_item_box" style="display:block;">
+                                <p><input id="starttime" type="text" class="caiji mr8" readonly value="2015-01-01" onfocus="$.openCalendar(this)"/>至<input id="endtime" class="caiji ml8" type="text" value="2015-01-01" readonly onfocus="$.openCalendar(this)"/></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tj_area resulotion">
+                        <h2>分辨率（米）</h2>
+						<div class="rangslider_wrap">
+							<input type="text"value="1" class="start_ratio" onkeydown="standard(this)"  onkeyup="sss(this);" />
+							<div class="ratio_slider"></div>
+							<input type="text" value="10" class="end_ratio" onkeydown="standard(this)"  onkeyup="sss(this);" />
+						</div>
+                    </div>
+                    <div class="tj_area">
+                        <h2>更多选项</h2>
+                        <div class="first_leve2">
+                            <div class="area leve2_item_box2" style="display:block;">
+                                <p id="shujuType" value="0" class="morexx">数据类型：<a class="yshi mr16 seclick" id="0101">原始影像</a><a class="zshe" id="0102" style="display:none">正射影像</a></p>
+                            </div>
+					        <div class="yunslider_wrap" >
+						     	<a class="yunliang" style="float:left">云量：</a>
+								<input type="text"value="0%" class="yun_start_ratio" onkeydown="standard(this)"  onkeyup="sss(this);" />
+								<div class="yun_slider"></div>
+								<input type="text" value="10%" class="yun_end_ratio" onkeydown="standard(this)"  onkeyup="sss(this);" />
+							</div>
+                        </div>
+                    </div>
+                    <div class="askbox" style="height:8%;*height:8%"><a class="askbt" >查询</a></div>
+                </div>
+				<div class=resultList>
+	                <div class="result_list result second" style="display:none;">
+	             <!--    <h3>
+	                        <a class="item_b  selecder selecteder" id="result_list">影像列表</a>
+	                        <a class="item_b" id="detail_info">详情信息</a>
+	                    </h3> --> 
+	                    <div class="second_leve2">
+	
+	                        <div class="result_list leve2_item">
+	                            <div class="list1 second_leve2">
+	                                <p class="list1_top">
+	                                    <span><i class="ite-all"><a>全选</a></i></span>
+	                                    <span><input type="checkbox" /><i class="showChose"><a>仅显示已选择</a></i></span>
+	                                    <span><i class="wxin"><a class="wxin-font">卫星筛选</a></i></span>
+	                                    <!-- <span class="nomg"><i class="fgai"></i>覆盖率计算</span> -->
+	                                </p>
+	                                <table class="result_table">
+	                                    <thead>
+	                                        <tr>
+	                                            <th class="operate">操作</th>
+	                                            <th class="weixin">卫星</th>
+	                                            <th class="chuanganqi">传感器</th>
+	                                            <th class="caijishijian" style="cursor: pointer;">采集时间	                                            
+	                                            </th>
+	                                            <th class="fenbilv">分辨率(米)</th>
+	                                        </tr>
+	                                    </thead>
+	                                </table>
+	                                <div id="originalimageresultList" class="gdtiao">
+	                                    <table class="result_table detial">
+	                                         <!--  <tr>
+	                                            <td class="operate">
+	                                                <i class="ite gxuan"></i><i class="hyan" title="贴图"></i><i class="qiu" title="详情"></i><i class="xzai" title="下载"></i>
+	                                            </td>
+	                                            <td class="weixin">GF1</td>
+	                                            <td class="chuanganqi">PMS1</td>
+	                                            <td class="caijishijian">2010/12/17</td>
+	                                            <td class="fenbilv">2</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="operate">
+	                                                <i class="ite gxuan"></i><i class="lyan" title="显示"></i><i class="qiu"></i><i class="xzai" title="下载"></i>
+	                                            </td>
+	                                            <td class="weixin">GF1</td>
+	                                            <td class="chuanganqi">PMS1</td>
+	                                            <td class="caijishijian">2010/12/17</td>
+	                                            <td class="fenbilv">2</td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="operate">
+	                                                <i class="ite"></i><i class="lyan"></i><i class="qiu"></i><i class="xzai"></i>
+	                                            </td>
+	                                            <td class="weixin">GF1</td>
+	                                            <td class="chuanganqi">PMS1</td>
+	                                            <td class="caijishijian">2010/12/17</td>
+	                                            <td class="fenbilv">2</td>
+	                                        </tr>   -->
+
+	                                    </table>
+	                                </div>
+	                                <p class="list-foot">
+	                                    <span>搜索结果<b class="hei">0</b>景，已选择<b class="hong">0</b>幅影像</span>
+	                                    <a class="xzaiAll">下载</a>
+	                                </p>
+	                            </div>
+	                        </div>
+	         
+	                    </div>
+	                </div>
+	            
+	                <div id="" class="resultList2" style="display:none;">
+		  <!-- 			<div id="" class="resultList2_title">
+		  					<a  class="resultList2_result on">影像列表</a>
+				  			<a  class="resultList2_detial">详细信息</a>
+			  			</div>  -->	
+			  			
+					
+						<div class="resultList2_result">
+							<div class="resultList_top">
+								<span class="checkboxAll w1"><a class="square-checkboxAll square-checkboxAll-image" type="button"><label class="chaeckall">全选</label></a></span>
+								<span class="resultList_top_cjSort w2" >采集时间</span>
+								<span class="resultList_top_area w3">地区</span>
+								<span class="resultList_top_operator top_w4">操作</span>
+							</div>
+							<div  class="list_body">
+								<div id="orthoimageresultList" class="list_body_1">
+									<!-- <div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div>
+										<div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div>	<div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div>	<div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div>	<div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div>	<div class="resultList_table">
+										<span class="w1"><a type="button" class="square-checkbox square-checkbox-image"></a></span>
+										<span class="w2">2010/12/17</span>
+										<span class="w3">广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松广东省东莞市松.</span>
+										<span class="w4">
+										<a class="eye" type="button"></a>
+										<a class="showDetail" type="button"></a>
+										<a class="download" type="button"></a>
+										</span>
+									</div> -->
+								
+		
+								</div>
+							</div>
+							<div class="list-foot">
+		                          <span>搜索结果<b class="hei">0</b>景，已选择<b class="hong">0</b>幅影像</span>
+	                              <a class="xzaiAll" target="_blank">下载</a>
+	                        </div>
+						</div>
+					</div>
+				</div>            
+            </div>
+        </div>
+         <!-- 原始数据 -数据详情弹出窗口 -->   
+         			
+                       <div class="detail_info leve2_item" style="display:none;">
+                       	<div class="close-detail"></div>
+	                            <div class="list2">
+	                            <table id="detial_table1" class="detial">
+	                            <tr><td rowspan="19" class="detail-img"></td></tr>
+	                            </table>
+	                                <div class="gdtiao2">
+	                                    <table id="detial_table" class="detial">
+	                                      <!--  <tr>
+	                                            <td class="td_one">缩略图</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <!-- <tr>
+	                                            <td class="td_one">标识ID</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <!-- <tr>
+	                                            <td class="td_one">地区编号</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <tr>
+	                                        	
+	                                            <td class="td_one">行列号</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">卫星</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">影像最小分辨率</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">光谱</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">开始时间</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">更新时间</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <!-- <tr>
+	                                            <td class="td_one">数据范围</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <!-- <tr>
+	                                            <td class="td_one">是否全覆盖</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <!-- <tr>
+	                                            <td class="td_one">影像ID</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <tr>
+	                                            <td class="td_one">数据类型</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                       <!--  <tr>
+	                                            <td class="td_one">组合数据id</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <tr>
+	                                            <td class="td_one">名称</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">云量</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">传感器类型</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">影像级别</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">采集开始时间</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">产品序列号</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">影像面积</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                       <!--  <tr>
+	                                            <td class="td_one">数据记录唯一标示ID</td>
+	                                            <td class="td-two"></td>
+	                                        </tr> -->
+	                                        <tr>
+	                                            <td class="td_one">数据采集结束时间</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">标题</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">坐标</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">地区描述</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                        <tr>
+	                                            <td class="td_one">压缩包大小</td>
+	                                            <td class="td-two"></td>
+	                                        </tr>
+	                                    </table>
+	                                </div>
+	                            </div>
+	                        </div>
+	                 
+	                     <!-- /弹出窗口 -->  
+	                  <!-- 正射数据 -数据详情弹出窗口 -->     
+	                     <div class="resultList2_detial" style="display:none" >
+	                     	<div class="close-detail"></div>
+				  			 <div class="list2">
+	                            <div id="detial_table2">
+	                            <div class="detail-img"></div>
+	                            </div>
+	                                <div class="gdtiao2">
+	                                    <table class="detial">
+					  			<tr>
+						  			<td>时间</td>
+						  			<td class="right"></td>
+					  			</tr>
+								<tr>
+									<td>范围区域</td>
+									<td class="right"></td>
+								</tr>
+								<tr>
+									<td>面积（平方公里）</td>
+									<td class="right"></td>
+								</tr>
+								<tr>
+									<td>分辨率</td>
+									<td class="right"></td>
+								</tr>
+								<tr>
+									<td>产品颜色</td>
+									<td class="right"></td>
+								</tr>
+								<tr>
+									<td>数据类型</td>
+									<td class="right"></td>
+								</tr>
+								<tr>
+									<td>坐标系统</td>
+									<td class="right"></td>
+								</tr>
+					  		</table>
+					  		</div>
+					  		</div>
+						</div> 
+					<!-- /弹出窗口 -->    
+        <!-- 地图 -->
+        <div class="map_content">
+            <div id="map" style="height: 100%;" class="fl"></div>
+        </div>
+		<!-- 卫星选择 -->
+		<form class="wxin_chose" style="display:none">
+			<div class="cgq_box">
+				<div sa-type="GF2">
+					<span class="nogreen ongreen">
+					<!-- <input class="items" type="checkbox" sa-sen="PMS" sa-type="GF2" style="display:none;" name="items" onclick="onlyshowsatellite('GF2')"> -->
+					</span>
+					<label>GF2</label>
+				</div>
+				<div sa-type="GF1">
+					<span class="nogreen ongreen">
+					<!-- <input class="items" type="checkbox" sa-sen="PMS" sa-type="GF1" style="display:none;" name="items" onclick="onlyshowsatellite('GF1')"> -->
+					</span>
+					<label>GF1</label>
+				</div>
+				<div sa-type="ZY3">
+					<span class="nogreen ongreen">
+					<!-- <input class="items" type="checkbox" sa-sen="NAD" sa-type="ZY3" style="display:none;" name="items"  onclick="onlyshowsatellite('ZY3')"> -->
+					</span>
+					<label>ZY3</label>
+				</div>
+				<div sa-type="ZY02C">
+					<span class="nogreen ongreen">
+					<!-- <input class="items" type="checkbox" sa-sen="HRC" sa-type="ZY02C" style="display:none;" name="items" onclick="onlyshowsatellite('ZY02C')"> -->
+					</span>
+					<label>ZY02C</label>
+				</div>
+			</div>
+		</form>
+		<div class='covergediv' id='covergediv' style="display:none">
+			<div class="myplfp">
+					<p class="jiazai">正在加载中....</p>
+				</div>
+		</div>
+    </div> 
+	<form id="submit_form" class="dn" action="" method="POST" target="_blank">
+		<input type="hidden" id="ids" name="ids" value="" />
+	</form>
+    <script src="cloudBox/js/base.js" ></script>
+    <script src="cloudBox/js/queryProductInformation.js" type='text/javascript'></script>
+    <script src="base/js/ajaxfileupload.js"></script> 
+    <script language="javascript" type="text/javascript"> 
+	$("#loginOut").click(function(){
+ 			window.location.href="logout.htm";
+ 		});
+ 		$(document).ready(function(){
+ 		var fanwei = $("div.cloudMain .fanwei");
+		  $("#longitude").click(function(){
+		    $(fanwei).css("min-height","190px");
+		  });
+		   $("#shp,#graph_select,#area").click(function(){
+		   $(fanwei).css("min-height","115px");
+		   });
+		});
+ 		
+
+	</script> 
+</body>
+</html>

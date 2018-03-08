@@ -1,0 +1,105 @@
+.bp-reset-element,body,h1,h2,h3,h4,h5,h6,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,blockquote,q,th,td,caption,table,div,span,object,iframe,p,pre,a,abbr,acronym,address,code,del,dfn,em,img,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,caption,tbody,tfoot,thead,tr
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family:"Microsoft YaHei", Helvetica, Tahoma,sans-serif;
+	vertical-align: baseline;
+}
+.clearfix {
+	*zoom: 1:;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0px;
+	font-size: 0px;
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	vertical-align: middle;
+}
+th, td, caption {
+    float: none !important;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+button, input, select, textarea {
+    font-size: 100%;
+    border-radius: 0;
+    vertical-align: middle;
+}
+input[type='radio'], input[type='checkbox'] {
+    margin: 0px 5px 0px 0;
+}
+body input.text, body input.title, body input[type=email], body input[type=text], body input[type=password] {
+    font-size: 1em;
+    line-height: normal;
+    height: 24px;
+}
+body input.text, body input.title, body input[type=email], body input[type=text], body input[type=password], body textarea, body .select {
+    background-color: #fff;
+    border: 1px solid #dce4eb;
+}
+li {
+  list-style-type:none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+	border-bottom-style: none;
+}
+table{
+    border-collapse: collapse;
+	width: 100%;
+}
+table th{
+    height:25px;
+    text-align:center;
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	
+}
+table  tbody tr{
+   margin: 0px 2px 0px ;
+}
+table td{
+	text-align:center;
+	white-space:normal;
+	word-break:break-all; 
+	word-wrap:break-word;
+}
+/* new add commons css code 2015-06-30
+author:lwc
+ */
+.hd{display:none;}
+.fullline{width:100%; height:1px; background-color:#dce4eb;}
+.margin50_0{margin:50px 0;}
+.margin50_0_0_0{margin:50px 0 0 0;}
+.commonsBtn{border:1px solid #dce4eb;}
+button.active{border:1px solid #3399ff; color:#3399ff !important;}
+.padding8{padding:8px;}
+.borderNone{border:none;}
+.margin0_0_17_0{margin:0 0 17px 0;}
+.margin0_0_7_0{margin-bottom:7px;}
+.borderRadius{border-radius:5px;}
+.margin0_20_0_0{margin-right:20px;}
+/* new add css code area 2015-06-30
+author:lwc
+ */
+.select-wrap{position:relative; width:100%; height:32px; left:-13px;}
+.select_wrap_commons{position:absolute; width:86px; height:29px; top:20px; max-width:86px; border:1px solid #dce4eb; font-size:14px; color:#9aabb8; line-height:29px; padding:0 0 0 10px;}
+.select_wrap_son_commons{position:absolute; border:1px solid #dce4eb; overflow-y:auto; left:-1px; top:29px; width:96px; max-width:96px; background-color:#fff; z-index:2; height:128px; text-align:center;}
+.select_wrap_province{left:0;}
+.select_wrap_city{left:110px;}
+.select_wrap_town{left:220px;}
+#government_list{width:350px; height:100%;}
+.result-item{text-align:left;}
+.please-select{position:absolute; display:inline-block !important; right:8px; top:10px; width:11px; height:11px; background:url(../../home/img/csssprite.png) no-repeat -35px -147px;}

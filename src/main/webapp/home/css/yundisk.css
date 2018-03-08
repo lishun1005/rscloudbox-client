@@ -1,0 +1,1028 @@
+/* header wrap */
+.header_Wrap {
+	width: 100%;
+	height: 84px;
+	border-bottom: 3px solid #379BE9;
+	min-width: 1200px;
+}
+
+.home_top {
+	width: 1200px;
+	height: 84px;
+	margin: 0px auto;
+}
+
+.home_top_content {
+	margin: 0 auto 6px;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+
+.home_top_content_left {
+	width: 50%;
+	float: left;
+	text-align: left
+}
+
+.home_top_content_left img {
+	width: 50%;
+	height: 100%;
+	padding: 9px 0px
+}
+
+.home_top_content_right {
+	width: 50%;
+	float: left
+}
+
+.home_top_ul {
+	float: right;
+	border: 1px solid #D6D6D6;
+	margin-top: 23px;
+}
+
+.home_top_ul li {
+	width: 80px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+.home_top_ul li:first-child {
+	border-right: 1px solid #D6D6D6;
+}
+
+.login_span {
+	display: inline-block;
+	line-height: 36px;
+	float: right;
+	margin-top: 23px;
+	margin-right: 10px;
+}
+
+.link_text {
+	height: 20px;
+	line-height: 20px;
+	color: #1C85E0;
+	width: 60px;
+	text-align: center;
+	display: inline-block;
+	cursor: pointer;
+}
+
+/* content wrap */
+.content_Wrap {
+	width: 100%;
+}
+
+.disk_center_content {
+	width: 1200px;
+	min-height: 500px;
+	display: block;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.disk_leftcontent {
+	float: left;
+	width: 248px;
+	overflow: hidden;
+}
+
+.disk_rightcontent {
+	float: right;
+	width: 940px;
+	overflow: hidden;
+}
+
+.title_p {
+	height: 43px;
+	background: none no-repeat scroll 0 0 #5498EF;
+	outline: 1px solid #5498EF;
+	margin-top: 20px;
+	line-height: 43px;
+	font-size: 18px;
+	color: #fff;
+}
+
+.title_p .cloud_icon {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background: url("../../home/img/usercenter-css-img.png") no-repeat
+		scroll -1px -166px transparent;
+	float: left;
+	margin-left: 20px;
+}
+
+.uc-l-channel-list li.active {
+	background-color: #E3F0FC;
+	border-left: 3px solid #F9602B;
+}
+
+.uc-l-channel-list li {
+	font-size: 14px;
+	height: 41px;
+	line-height: 41px;
+	border: 1px dotted #E3E3E3;
+	position: relative;
+}
+
+.uc-l-channel-list li a {
+	display: block;
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	text-indent: 55px;
+	font-size: 16px;
+}
+
+.ovcl {
+	overflow: hidden;
+	clear: both;
+}
+
+.mt10 {
+	position: relative;
+}
+
+.mtop_10,.mt10 {
+	margin-top: 10px;
+}
+
+.rel {
+	position: relative;
+}
+
+.mt5 {
+	margin-top: 5px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.rel {
+	position: relative;
+}
+
+.mr20 {
+	margin-right: 20px;
+}
+
+.fr {
+	float: right;
+}
+
+.rel {
+	position: relative;
+}
+
+.abs {
+	position: absolute;
+}
+
+.ml20 {
+	margin-left: 20px;
+}
+
+.fl {
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #434A54;
+	outline: medium none;
+	background: none repeat scroll 0% 0% transparent;
+}
+
+.yunfile-top a.yunfile-upload-btn {
+	padding-left: 32px;
+	padding-right: 22px;
+	background-position: 2px -342px;
+}
+
+.yunfile-top a.btn {
+	display: block;
+	float: left;
+	background-image: url("../home/img/usercenter-css-img.png");
+}
+
+.btn-sm,.btn-group-sm>.btn {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.btn-primary {
+	color: #FFF;
+	background-color: #428BCA;
+	border-color: #357EBD;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.yunfile-top a.yunfile-createfolder-btn {
+	padding-left: 33px;
+	background-position: 0px -372px;
+}
+
+.yunfile-top a.btn {
+	display: block;
+	float: left;
+	background-image: url("../home/img/usercenter-css-img.png");
+}
+
+.btn-grey {
+	background-color: #EEE;
+	border-color: #C9C9C9;
+	color: #434A54;
+}
+
+.btn-sm,.btn-group-sm>.btn {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.yunfile-volumen {
+	width: 239px;
+	border: 1px solid #CDCDCD;
+	border-radius: 10px;
+}
+
+.progress {
+	margin-top: 6px;
+	width: 300px;
+	float: right;
+	height: 20px;
+	overflow: hidden;
+	background-color: #F5F5F5;
+	border-radius: 4px;
+	box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+	border: 1px solid #CDCDCD;
+	position: relative;
+}
+
+.yunfile-volumen .progress-bar {
+	border-radius: 10px;
+}
+
+.progress-bar {
+	float: left;
+	width: 0px;
+	height: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFF;
+	text-align: center;
+	background-color: #428BCA;
+	box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15) inset;
+	transition: width 0.6s ease 0s;
+}
+
+.uc-yunfile-kuorong {
+	background: none repeat scroll 0% 0% #57B846;
+	right: 0px;
+	height: 100%;
+	border-radius: 10px;
+}
+
+.yunfile-used {
+	font-size: 12px;
+	line-height: 20px;
+	position: absolute;
+	z-index: 20;
+	color: #000;
+	right: 10px;
+}
+
+.tab_title {
+	padding: 10px 20px;
+	font-size: 15px;
+}
+
+.clouddisklist td,.clouddisklist th {
+	border: 1px dotted #E3E3E3;
+	text-align: left;
+	text-indent: 20px;
+}
+
+.clouddisklist tr {
+	border-bottom: 1px dotted #E3E3E3;
+}
+
+.clouddisklist th {
+	height: 40px;
+	background: none repeat scroll 0% 0% #EEE;
+}
+
+.clouddisklist td {
+	height: 60px;
+	color: #666666;
+}
+
+.fileIcon_div {
+	line-height: 20px;
+	float: left;
+	width: 350px;
+	text-indent: 0px;
+	font-size: 14px;
+	margin-left: 20px;
+}
+
+.file_title {
+	display: block;
+	line-height: 25px;
+	margin-top: 5px;
+}
+
+.file_menue {
+	display: none;
+}
+
+.file_menue_ul>li {
+	width: 58px;
+	color: #5498EF;
+	text-align: left;
+	float: left;
+	font-size: 12px;
+	cursor: pointer;
+	line-height: 15px;
+}
+
+.file_menue_ul {
+	overflow: hidden;
+}
+
+.folder_icon {
+	background: url("../../home/img/usercenter-css-img.png") no-repeat
+		scroll -139px -116px transparent;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	float: left;
+	margin: 12px 0px;
+}
+
+.file_icon {
+	background: url("../../home/img/usercenter-css-img.png") no-repeat
+		scroll -139px -237px transparent;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	float: left;
+	margin: 12px 0px;
+}
+
+.zip_icon {
+	background: url("../../home/img/usercenter-css-img.png") no-repeat
+		scroll -265px -11px transparent;
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	float: left;
+	margin: 12px 0px;
+}
+
+/* 鍒嗛〉 */
+.page_turning {
+	text-align: right;
+	font-size: 13px;
+	color: #333;
+	height: 35px;
+	line-height: 35px;
+	position: relative;
+	clear: both;
+}
+
+.mbot_10,.mb10 {
+	margin-bottom: 10px;
+}
+
+.mtop_20,.mt20 {
+	margin-top: 20px;
+}
+
+#new_dc_page_turning a.page_turning_prev {
+	top: 0px;
+}
+
+.page_turning a.page_turning_prev {
+	position: relative;
+	top: 0px;
+}
+
+.page_turning a,.page_turning input {
+	padding: 4px 10px;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	margin: 0px 5px 0px 0px;
+}
+
+.page_turning a {
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	background: none repeat scroll 0% 0% #F1F1F1;
+	line-height: 100%;
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #434A54;
+	outline: medium none;
+}
+
+#new_dc_page_turning a.page_turning_prev img {
+	top: 0px;
+}
+
+.page_turning a.page_turning_prev img {
+	position: relative;
+	top: 0px;
+}
+
+img {
+	border: 0px none;
+}
+
+.page_turning a:hover,.page_turning_num a:hover,.page_turning_num a.page_turning_num_active,.go_appoint_page:hover
+	{
+	background: none repeat scroll 0% 0% #6AACF6;
+	color: #FFF;
+}
+
+#new_dc_page_turning a.page_turning_next {
+	position: relative;
+}
+
+.page_turning a.page_turning_next {
+	margin: 0px;
+}
+
+#new_dc_page_turning a.page_turning_next img {
+	top: 0px;
+}
+
+.page_turning a.page_turning_next img {
+	position: relative;
+	top: 0px;
+	left: 2px;
+}
+
+.page_turning_go input {
+	height: 20px;
+	width: 30px;
+	line-height: 20px;
+	font-size: 16px;
+	font-family: "SimSun";
+}
+
+.page_turning input {
+	font-size: 16px;
+	width: 30px;
+	padding: 2px 3px;
+}
+
+.page_turning a.go_appoint_page {
+	margin: 0px 20px;
+	font-family: arial, "寰蒋闆呴粦", "Microsoft Yahei";
+	padding: 5px 10px;
+}
+
+/* 鏂板缓鏂囦欢澶�*/
+.dialog {
+	width: 498px;
+	height: 200px;
+	position: fixed;
+	bottom: 50%;
+	right: 50%;
+	margin-right: -249px;
+	margin-bottom: -100px;
+	background: #fff;
+	display: none;
+}
+
+.dialog_bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: none;
+}
+
+.dialog_title {
+	height: 26px;
+	padding: 6px 15px;
+	background: none repeat scroll 0% 0% #E6E6E6;
+}
+
+.dialog_content {
+	width: 468px;
+	height: 148px;
+	padding: 7px 15px;
+}
+
+.dialog,.creatfile_dialog,.uploadfile_dialog,.rename_dialog,.deletefile_dialog,.movefile_dialog,.loadingfile_dialog
+{
+	border: 4px solid #6E93E3;
+}
+/* 加载文件 */
+.dialog.movefile_dialog {
+	height: auto;
+}
+
+.upload_management_dialog {
+	width: 600px;
+	height: 400px;
+	z-index: 999;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	bottom: 0px;
+	right: 0px;
+}
+
+.upload_management_dialog .dialog_content {
+	width: 100%;
+	padding: 0px 0px;
+}
+
+.upload_management_dialog .dialog_content .progress {
+	width: 100%;
+}
+
+.upload_management_dialog_floot {
+	width: 600px;
+	position: fixed;
+	bottom: 4px;
+	right: 4px;
+}
+
+.dialog_content table {
+	table-layout: fixed;
+}
+
+.dialog_content table td {
+	border: 1px dotted #E3E3E3;
+	text-align: left;
+	padding: 2px 4px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	color: #434A54;
+}
+
+.dialog_content table  td:hover {
+	text-overflow: inherit;
+	overflow: visible;
+	color:red;
+}
+
+.upload_management_dialog_floot table th {
+	background: none repeat scroll 0% 0% #E6E6E6;
+	border: 1px solid #6E93E3;
+}
+
+.dialog_content table td:nth-child(1),.upload_management_dialog_floot table th:nth-child(1)
+	{
+	width: 20%;
+}
+
+.dialog_content table td:nth-child(2),.upload_management_dialog_floot table th:nth-child(2)
+	{
+	width: 15%;
+}
+
+.dialog_content table td:nth-child(3),.upload_management_dialog_floot table th:nth-child(3)
+	{
+	width: 15%;
+}
+
+.dialog_content table td:nth-child(4),.upload_management_dialog_floot table th:nth-child(4)
+	{
+	width: 50%;
+}
+
+.loadingfile_dialog .bottom_text {
+	color: #989696;
+}
+
+.movefile_dialog .dialog_content {
+	height: auto;
+	min-height: 148px;
+	overflow: hidden;
+}
+
+.movefile_dialog .file_place {
+	width: 100%;
+	height: 200px;
+	overflow: auto;
+	margin-top: 10px;
+	border: 1px solid #D3D3D3;
+}
+/* 树形结构 */
+#fileTree {
+	height: auto;
+	border-bottom: 1px solid #DDD;
+	background: none repeat scroll 0% 0% #F3F3F3;
+	width: 100%;
+}
+
+.movefile_dialog .tree_icon {
+	background-position: -74px -54px;
+	width: 18px;
+	height: 18px;
+	line-height: 0;
+	margin: 0px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0px none;
+	cursor: pointer;
+	outline: medium none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-image: url("../../home/img/zTreeStandard.png");
+}
+
+.movefile_dialog .tree_icon.off {
+	background-position: -92px -54px;
+}
+
+.movefile_dialog .fileicon {
+	line-height: 0;
+	margin: 0px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	vertical-align: top;
+	border: 0px none;
+	cursor: pointer;
+	outline: medium none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-image: url("../../home/img/zTreeStandard.png");
+	font-size: 14px;
+	margin-right: 2px;
+	background-position: -110px 0px;
+}
+
+.movefile_dialog .fileicon.off {
+	background-position: -110px -16px;
+}
+
+.movefile_dialog .ztree_ul {
+	font-size: 12px;
+}
+
+.movefile_dialog .ztree_ul  li {
+	padding: 0px;
+	margin: 0px;
+	list-style: outside none none;
+	line-height: 14px;
+	text-align: left;
+	white-space: nowrap;
+	outline: 0px none;
+}
+
+.movefile_dialog .ztree_ul  li a {
+	font-size: 12px;
+	padding: 1px 3px 0px 0px;
+	margin: 0px;
+	cursor: pointer;
+	height: 17px;
+	color: #333;
+	background-color: transparent;
+	text-decoration: none;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.movefile_dialog .ztree_ul  li a.on {
+	color: #000;
+	padding: 2px;
+	font-weight: bold;
+}
+
+.movefile_dialog .treechild_icon {
+	line-height: 0;
+	margin: 0px;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0px none;
+	cursor: pointer;
+	outline: medium none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-image: url("../../home/img/zTreeStandard.png");
+	background-position: -56px -18px;
+}
+
+.movefile_dialog .ztree_child_ul {
+	margin: 0px;
+	padding: 0px 0px 0px 18px;
+	display: none;
+}
+
+.movefile_dialog .ztree_child_ul>li {
+	
+}
+
+/* 鍐呭 */
+.font-center {
+	text-align: center;
+}
+
+.ovcl {
+	overflow: hidden;
+	clear: both;
+}
+
+.mtop_20,.mt20 {
+	margin-top: 20px;
+}
+
+p {
+	margin: 0px;
+}
+
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button
+	{
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	font-size: 1em;
+}
+
+.form-control {
+	background-color: #FFF;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s
+		ease-in-out 0s;
+}
+
+.form-control {
+	float: left;
+	display: block;
+	width: 370px;
+	height: 20px;
+	padding: 6px 10px;
+	font-size: 14px;
+	color: #888;
+	vertical-align: middle;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857;
+	color: #555;
+	background-color: #FFF;
+	background-image: none;
+	border: 1px solid #CCC;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s
+		ease-in-out 0s;
+}
+
+input,button,select,textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+input {
+	line-height: normal;
+}
+
+button,input,optgroup,select,textarea {
+	margin: 0px;
+	font: inherit;
+	color: inherit;
+}
+
+.font-left {
+	text-align: left;
+}
+
+.font-red {
+	color: #F95F2B;
+}
+
+.ui-dialog .btn {
+	padding: 10px 25px;
+}
+
+.yunfile-dialog-btns .btn {
+	border: 1px solid #C9C9C9;
+	border-radius: 0px;
+}
+
+.ui-widget-content a {
+	color: #222;
+}
+
+.btn-grey {
+	background-color: #EEE;
+	border-color: #C9C9C9;
+	color: #434A54;
+}
+
+.mr20 {
+	margin-right: 20px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.ui-dialog .btn {
+	padding: 10px 25px;
+}
+
+.yunfile-dialog-btns .btn {
+	border: 1px solid #C9C9C9;
+	border-radius: 0px;
+}
+
+.ui-widget-content a {
+	color: #222;
+}
+
+.btn-grey {
+	background-color: #EEE;
+	border-color: #C9C9C9;
+	color: #434A54;
+}
+
+.btn {
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	-moz-user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	background: none repeat scroll -233px -11px transparent;
+	height: 25px;
+	top: 40%;
+	width: 25px;
+	border: medium none;
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+	position: absolute;
+	right: 0.3em;
+	top: 50%;
+	width: 20px;
+	margin: -10px 0px 0px;
+	padding: 1px;
+	height: 20px;
+}
+
+.ui-widget input,.ui-widget select,.ui-widget textarea,.ui-widget button
+	{
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	font-size: 1em;
+}
+
+input,button,select,textarea {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,html input[type="button"],input[type="reset"],input[type="submit"]
+	{
+	cursor: pointer;
+}
+
+.closeicon {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	float: right;
+	cursor: pointer;
+	font-weight: bold;
+	border-radius: 50%;
+	border: 1px solid #000;
+	line-height: 20px;
+	text-align: center;
+}
+
+.uploadify-button {
+	background-color: #505050;
+	background-image: -moz-linear-gradient(center bottom, #505050 0%, #707070 100%);
+	background-position: center top;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+	border: 2px solid #808080;
+	color: #FFF;
+	font: bold 12px Arial, Helvetica, sans-serif;
+	text-align: center;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	width: 80px;
+	cursor: pointer;
+	display: inline-block;
+	padding: 7px 12px;
+}
+
+.upload_P {
+	margin-top: 20px;
+	height: 42px;
+	line-height: 25px;
+}
+
+.upload_P span {
+	padding: 7px 15px;
+	display: inline-block;
+	margin-right: 30px;
+	border: 1px solid #C9C9C9;
+	background-color: #E3E3E3;
+	cursor: pointer;
+}
+
+.yunfile-upload-bottom {
+	margin: 30px 0px 0px;
+	text-align: center;
+	font-size: 14px;
+}
+
+.delete_text {
+	color: #F95F2B;
+	float: left;
+}
